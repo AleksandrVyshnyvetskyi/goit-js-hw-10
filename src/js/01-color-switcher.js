@@ -1,10 +1,32 @@
 
-// Напиши скрипт, который после нажатия кнопки «Start», раз в секунду меняет цвет фона <body> на случайное значение используя инлайн стиль. 
-// При нажатии на кнопку «Stop», изменение цвета фона должно останавливаться.
+// Напиши скрипт, который после нажатия кнопки «Start», раз в секунду меняет цвет фона <body> на случайное значение используя 
+// инлайн стиль. При нажатии на кнопку «Stop», изменение цвета фона должно останавливаться.                                         +
 // Учти, на кнопку «Start» можно нажать бесконечное количество раз. Сделай так, чтобы пока изменение темы запушено, 
-// кнопка «Start» была не активна (disabled).
-
+// кнопка «Start» была не активна (disabled).                                                                                       +
 
 function getRandomHexColor() {
     return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
+
+const startBtn = document.querySelector('button[data-start]');
+const stopBtn = document.querySelector('button[data-stop]');
+let intervalId = null;
+
+const startBtnClick = () => {
+    console.log('+1 click to startBtn')
+    intervalId = setInterval(() => {
+        document.body.style.backgroundColor = getRandomHexColor();
+    }, 1000);
+    startBtn.setAttribute('disabled', 'true');
+    stopBtn.removeAttribute('disabled', 'true');
+};
+
+const stopBtnClick = () => {
+    console.log('+1 click to stopBtn')
+    clearInterval(intervalId);
+    startBtn.removeAttribute('disabled', 'true');
+    stopBtn.setAttribute('disabled', 'true');
+};
+
+startBtn.addEventListener('click', startBtnClick);
+stopBtn.addEventListener("click", stopBtnClick);
