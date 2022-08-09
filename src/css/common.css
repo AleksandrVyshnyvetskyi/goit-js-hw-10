@@ -7,12 +7,101 @@ body {
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
+  background: -webkit-linear-gradient(45deg,#d2bd92,#ddcaa0,#f8f3e0);
   color: #212121;
   line-height: 1.5;
+  height: 100vh;
 }
 
 img {
   display: block;
   max-width: 100%;
+}
+
+.calendar {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.calendar input {
+  font-size: 36px;
+  max-width: 300px;
+  border: 0;
+  border-radius: 4px;
+  text-align: center;
+  background: -webkit-linear-gradient(90deg,#c3284d,#f76463);
+  display: table;
+  color: white;
+  border-radius: 5px;
+  mix-blend-mode: multiply;
+  box-shadow: 5px 5px 13px 0px rgba(34, 60, 80, 0.6);
+}
+
+.calendar button {
+  width: 100px;
+  padding: 10px;
+  margin: 10px auto 40px;
+  border: 0;
+  border-radius: 4px;
+  background: -webkit-linear-gradient(90deg,#bb056c,#e72d44);
+  display: table;
+  color: whitesmoke;
+  mix-blend-mode: multiply;
+  font-size: 18px;
+  box-shadow: 5px 5px 13px 0px rgba(34, 60, 80, 0.6);
+  cursor: pointer;
+}
+
+.timer {
+  margin: 100px auto 0;
+  display: flex;
+  justify-content: center;
+  font-size: 72px;
+  max-width: 700px;
+  border: 10px solid red;
+  border-image: -webkit-linear-gradient(90deg,#bb056c,#e72d44);
+  border-image-slice: 1;
+  box-shadow: 5px 5px 13px 0px rgba(34, 60, 80, 0.6);
+}
+
+.field {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  box-shadow: 5px 5px 13px 0px rgba(34, 60, 80, 0.6);
+  border-radius: 5px;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.value {
+  min-width: 100px;
+  padding-bottom: 15px;
+  text-align: center;
+  background: -webkit-linear-gradient(90deg,#c3284d,#f76463);
+  display: table;
+  color: white;
+  border-radius: 5px;
+  mix-blend-mode: multiply;
+}
+
+.field::before {
+  content: attr(data-title);
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  font-size: 14px;
+}
+.field:not(:last-child)::after {
+  content: ':';
+  position: absolute;
+  right: -17px;
 }
