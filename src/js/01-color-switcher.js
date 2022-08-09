@@ -19,6 +19,8 @@ const startBtnClick = () => {
     }, 1000);
     startBtn.setAttribute('disabled', 'true');
     stopBtn.removeAttribute('disabled', 'true');
+    startBtn.style.background = '#808080';
+    stopBtn.style.background = '-webkit-linear-gradient(90deg,#bb056c,#e72d44)';
 };
 
 const stopBtnClick = () => {
@@ -26,6 +28,8 @@ const stopBtnClick = () => {
     clearInterval(intervalId);
     startBtn.removeAttribute('disabled', 'true');
     stopBtn.setAttribute('disabled', 'true');
+    stopBtn.style.background = '#808080';
+    startBtn.style.background = '-webkit-linear-gradient(90deg,#bb056c,#e72d44)';
 };
 
 startBtn.addEventListener('click', startBtnClick);
