@@ -25,6 +25,26 @@ body {
   padding: 30px;
 }
 
+.container--main{ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container--main ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container--main a {
+  padding: 20px 10px;
+}
+
+.container--main li {
+  margin: 40px;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -41,6 +61,10 @@ a {
   box-shadow: 5px 5px 13px 0px rgba(34, 60, 80, 0.6);
   padding: 2px 4px;
   margin: 5px;
+}
+
+ul {
+  list-style: none;
 }
 
 li {
@@ -79,15 +103,13 @@ input {
 }
 
 button {
-  width: 100px;
-  padding: 10px;
+  padding: 10px 20px;
   margin: 10px auto 40px;
   border: 0;
   border-radius: 4px;
   background: -webkit-linear-gradient(90deg,#bb056c,#e72d44);
   display: table;
   color: whitesmoke;
-  /* mix-blend-mode: multiply; */
   font-size: 18px;
   box-shadow: 5px 5px 13px 0px rgba(34, 60, 80, 0.6);
   cursor: pointer;
@@ -98,7 +120,7 @@ button {
   display: flex;
   justify-content: center;
   font-size: 72px;
-  max-width: 700px;
+  width: 700px;
   border: 10px solid red;
   border-image: -webkit-linear-gradient(90deg,#bb056c,#e72d44);
   border-image-slice: 1;
@@ -140,6 +162,7 @@ button {
   transform: translateX(-50%);
   font-size: 14px;
 }
+
 .field:not(:last-child)::after {
   content: ':';
   position: absolute;
