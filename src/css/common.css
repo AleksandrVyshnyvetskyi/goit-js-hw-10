@@ -118,14 +118,14 @@ input {
 }
 
 button {
-  padding: 10px 20px;
+  padding: 30px 40px;
   margin: 10px auto 40px;
   border: 0;
   border-radius: 4px;
   background: -webkit-linear-gradient(90deg,#bb056c,#e72d44);
   display: table;
   color: whitesmoke;
-  font-size: 18px;
+  font-size: 28px;
   box-shadow: 5px 5px 13px 0px rgba(34, 60, 80, 0.6);
   cursor: pointer;
 }
