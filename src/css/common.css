@@ -7,6 +7,7 @@ body {
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: transform .5s ease;
 }
 
 .container {
@@ -64,6 +65,17 @@ a {
   box-shadow: 5px 5px 13px 0px rgba(34, 60, 80, 0.6);
   padding: 2px 4px;
   margin: 5px 0;
+}
+
+.go-back {
+  color: #f8f3e0;
+  border: 2px solid black;
+  background: -webkit-linear-gradient(90deg,#bb056c,#e72d44);
+  padding: 4px;
+}
+
+.go-back:hover {
+  border: 2px solid #e72d44;
 }
 
 ul {
