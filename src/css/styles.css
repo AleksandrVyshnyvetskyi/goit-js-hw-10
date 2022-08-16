@@ -50,14 +50,19 @@ body {
 }
 
 .country-info span {
+  font-style: normal;
   font-size: 18px;
   font-weight: 700;
   margin-right: 10px;
+  color: #212121;
 }
 
 .country-info p {
   font-size: 18px;
   font-style: italic;
+  font-weight: 500;
+  color: #c3284d;
+  text-decoration: underline;
 }
 
 .country {
