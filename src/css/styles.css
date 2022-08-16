@@ -14,7 +14,79 @@ body {
 
 #search-box {
   font: inherit;
-  padding: 8px;
-  max-width: 320px;
-  margin-bottom: 16px;
+  font-size: 36px;
+  max-width: 300px;
+  border: 0;
+  border-radius: 4px;
+  text-align: center;
+  background: -webkit-linear-gradient(90deg,#c3284d,#f76463);
+  display: table;
+  color: white;
+  border-radius: 5px;
+  mix-blend-mode: multiply;
+  box-shadow: 5px 5px 13px 0px rgba(34, 60, 80, 0.6);
+  margin-bottom: 20px;
 }
+
+.container {
+  background: -webkit-linear-gradient(45deg,#d2bd92,#ddcaa0,#f8f3e0);
+  color: #212121;
+  height: 100vh;
+  box-shadow: 0px 5px 10px 10px rgba(34, 60, 80, 0.2) inset;
+  margin: 0;
+  padding: 30px;
+}
+
+.country-list {
+  padding: 0;
+}
+
+.country-info{
+  width: 300px;
+  padding: 15px;
+  border: 2px solid #c3284d;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px 10px rgba(34, 60, 80, 0.2) inset;
+}
+
+.country-info span {
+  font-size: 18px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.country-info p {
+  font-size: 18px;
+  font-style: italic;
+}
+
+.country {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 18px;
+  text-align: center;
+}
+
+.country__flag{
+  width: 50px;
+  margin-right: 10px;
+}
+
+.country-list__item {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 10px;
+  border: 2px solid #c3284d;
+  border-radius: 10px;
+  margin: 5px;
+  box-shadow: 0px 5px 10px 10px rgba(34, 60, 80, 0.2) inset;
+}
+
+.country-list__item img {
+  margin-right: 10px;
+}
+
+
