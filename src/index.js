@@ -73,11 +73,3 @@ function onInput(evn) {
         console.log(error);
     })
 }
-
-
-
-
-
-// const createListItems = (item) => `<li class="list-item">
-// <img src="${item.flags.svg}" alt="flag of ${item.name.official}" width="50">
-// <h2>${item.name.official}</h2></li>`
