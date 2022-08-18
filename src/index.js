@@ -50,21 +50,25 @@ const filter = (array) => {
     if (array.length === 1) {
         clearList();
         return createCautryCart(array[0]);
-    } else if (array.length < 10 && array.length > 0) {
+    } else if (array.length <= 10 && array.length > 1) {
         clearList();
         insertContent (array);
-    } else if (array.length > 10) {
+    } else if (array.length >= 10) {
         clearList();
         Notiflix.Notify.info("Too many matches found. Please enter a more specific name 🤖");
     } else { 
         clearList();
-        Notiflix.Notify.failure("Oops, there is no country with that name 😱");}
+        Notiflix.Notify.failure("Oops, there is no country with that name 😱");
+    }
     }
 
     refs.inputCountryEl.addEventListener('input', debounce(onInput, DEBOUNCE_DELAY));
 
 function onInput(evn) {
-    const searchName = evn.target.value.trim().toUpperCase();
+    const searchName = evn.target.value.trim();
+    if (searchName === "") {
+        return;
+    }
     fetchCountries(searchName)
     .then((data) => {
         filter(data);
